@@ -9,9 +9,13 @@
       {{> loginButtons align="right"}}
     </div>
     {{#if currentUser}}
-      <div class="btn btn-block btn-default open-modal-settings">My Stuff</div>
+      <a href="{{pathFor 'dashboard'}}">
+        <div class="btn btn-block btn-default open-modal-settings">My Stuff</div>
+      </a>
       <br>
-      <div class="btn btn-block btn-warning open-modal-pitch">Pitch!</div>
+      <a href="{{pathFor 'pitch_submit'}}">
+        <div class="btn btn-block btn-warning open-modal-pitch">Pitch!</div>
+      </a>
     {{/if}}
     <br>
   </div>

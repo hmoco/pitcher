@@ -1,4 +1,4 @@
-Template.pitch_submit_modal.events({
+Template.pitch_submit.events({
   "submit form": function (event) {
     event.preventDefault();
 
@@ -9,10 +9,8 @@ Template.pitch_submit_modal.events({
       claimed_by: '',
       pitched_by: Meteor.userId(),
       title: title,
-      description: description,
+      description: description
     });
-
-    Modal.hide();
   }
 });
 
