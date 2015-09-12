@@ -4,6 +4,9 @@
       {{#each pitch}}
         {{> pitch_item}}
       {{/each}}
+      {{#if no_pitches}}
+      <h3> No pitches found, help by pitching out an idea!</h3>
+      {{/if}}
     </ul>
   </div>
   <div class="col-xs-3">
