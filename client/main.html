@@ -2,30 +2,39 @@
   <title>Pitches</title>
 </head>
 
+
 <body>
 <div class="container">
-  <div class="col-sm-9">
-  <header>
-    {{> header}}
-    </header>
+  <div class="col-xs-9">
+  <h1>Pitches</h1>
+    <ul>
+      {{#each pitch}}
+        {{> pitches}}
+      {{/each}}
+    </ul>
     </div>
-    <div class="col-sm-3">
-
+    <div class="col-xs-3">
+    <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+    {{> header}}
     <h1>New Pitch!</h1>
  
       <form class="new-pitch">
         <input type="text" name="title" placeholder="Name your Pitch!" />
         <input type="text" name="description" placeholder="Describe your Pitch" />
-
-      <input type="submit" value="Submit">
+        <br>
+      <input class="btn-md-warning" value="Pitch!" type="submit" />
       </form>
+      <br>
+      </div>
+    </nav>
   </div>
   </div>
 </body>
  
 <template name="pitches">
   <li>
-    <input type="button" class="claim" value="Claim" />
+    <input type="button" class="claim btn-md-warning" value="Claim" />
   <h3>{{title}}:</h3>{{description}}
   </li>
 </template>
