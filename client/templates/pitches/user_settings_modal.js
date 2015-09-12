@@ -10,9 +10,9 @@ Template.user_settings_modal.events({
 
 Template.user_settings_modal.helpers({
    claims: function () {
-        return Pitch.find({claimed_by: Meteor.user()._id});
+        return Pitch.find({claimed_by: Meteor.userId()});
     },
     pitches: function() {
-        return Pitch.find({pitched_by: Meteor.user()});
+        return Pitch.find({pitched_by: Meteor.userId()});
     }
 });
