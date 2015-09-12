@@ -1,16 +1,18 @@
 <template name="header">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="/">Pitcher</a>
-  </div>
-  <div class="collapse navbar-collapse" id="navigation">
-    <ul class="nav navbar-nav navbar-right">
-      {{> loginButtons}}
-    </ul>
-  </div>
+      <div class="navbar-header">
+        <br>
+        <img style="width:100%; border-radius: 150px; -webkit-border-radius: 150px; -moz-border-radius: 150px;" src="http://localhost:3000/pitcher.jpg" alt="Pitcher">
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="nav navbar-nav navbar-right">
+          {{> loginButtons}}
+        </ul>
+      </div>
 </template>
