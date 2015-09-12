@@ -11,6 +11,8 @@ Template.pitch_submit.events({
       title: title,
       description: description
     });
+
+    Router.go('pitches_page');
   }
 });
 
