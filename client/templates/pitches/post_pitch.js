@@ -12,6 +12,7 @@ Template.body.events({
       description: description,
     });
     if (Meteor.user().shitcoins){
+      debugger;
       Meteor.users.update(Meteor.userId(), {$set: {shitcoins: Meteor.user().shitcoins + 10}})
     } else {
       Meteor.users.update(Meteor.userId(), {$set: {shitcoins: 10}})
