@@ -14,5 +14,8 @@ Template.dashboard.helpers({
   },
   pitches: function() {
     return Pitch.find({pitched_by: Meteor.userId()});
-  }
+  },
+  shitcoin: function() {
+    return Meteor.user().shitcoins || 0
+  },
 });
