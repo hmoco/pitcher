@@ -1,9 +1,14 @@
 Template.pitch_submit_button.events({
-  "click .open-modal": function(event) {
+  "click .open-modal-pitch": function(event) {
     event.preventDefault();
-    id = this._id;
     if(Meteor.user() != null) {
       Modal.show('pitch_submit_modal');
     }    
+  },
+  "click .open-modal-settings": function(e) {
+  	e.preventDefault();
+  	if (Meteor.user() != null) {
+  		Modal.show('user_settings_modal');
+  	}
   }
 });

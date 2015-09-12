@@ -7,7 +7,7 @@ Template.body.events({
 
     Pitch.insert({
       claimed_by: '',
-      pitched_by: 'current_user',
+      pitched_by: Meteor.user()._id,
       title: title,
       description: description,
     });
