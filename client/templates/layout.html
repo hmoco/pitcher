@@ -1,9 +1,12 @@
 <template name="layout">
 	<br>  
-  <div class="container">
-    <div id="main">
+  <div class="container-fluid">
+    <div id="main" class="posts page col-xs-9 container-fluid">
       <!-- let the router take care of this -->
       {{> yield}}
+    </div>
+    <div class="col-xs-3 container-fluid">
+      {{> sidebar}}
     </div>
   </div>
 </template>

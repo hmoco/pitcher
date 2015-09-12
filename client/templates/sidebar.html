@@ -1,0 +1,18 @@
+<template name="sidebar">
+  <div class="navbar-collapse collapse" role="navigation">
+    <a href="{{pathFor 'pitches_page'}}">
+      <img style="width:100%; border-radius: 150px; -webkit-border-radius: 150px; -moz-border-radius: 150px;" src="http://localhost:3000/pitcher.jpg" alt="Pitcher">
+    </a>
+    <br/>
+    <br/>
+    <div class="btn btn-block btn-default" id="navigation">
+      {{> loginButtons align="right"}}
+    </div>
+    {{#if currentUser}}
+      <div class="btn btn-block btn-default open-modal-settings">My Stuff</div>
+      <br>
+      <div class="btn btn-block btn-warning open-modal-pitch">Pitch!</div>
+    {{/if}}
+    <br>
+  </div>
+</template>
