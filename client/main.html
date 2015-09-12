@@ -5,11 +5,11 @@
 
 <body>
 <div class="container">
-  <div class="col-xs-9">
+  <div class="posts page col-xs-9">
   <h1>Pitches</h1>
     <ul>
       {{#each pitch}}
-        {{> pitches}}
+        {{> pitch_item}}
       {{/each}}
     </ul>
     </div>
@@ -17,25 +17,10 @@
     <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
     {{> header}}
-    <h1>New Pitch!</h1>
- 
-      <form class="new-pitch">
-        <input type="text" name="title" placeholder="Name your Pitch!" />
-        <input type="text" name="description" placeholder="Describe your Pitch" />
-        <br>
-      <input class="btn-md-warning" value="Pitch!" type="submit" />
-      </form>
+    {{> post_pitch}}
       <br>
       </div>
     </nav>
   </div>
   </div>
 </body>
- 
-<template name="pitches">
-  <li>
-    <input type="button" class="claim btn-md-warning" value="Claim" />
-  <h3>{{title}}:</h3>{{description}}
-  </li>
-</template>
-

@@ -1,4 +1,4 @@
-Template.body.events({
+Template.helpers.body({
   "submit .new-pitch": function (event) {
     event.preventDefault();
 
@@ -14,11 +14,6 @@ Template.body.events({
 
     event.target.title.value = "";
     event.target.description.value = "";
-
-  },
-  "click .claim": function(event) {
-    event.preventDefault();
-    id = this._id;
-    Pitch.update(id, {$set: {claimed_by: 'current_user'}});
   }
 });
+
