@@ -13,6 +13,6 @@ Template.user_settings_modal.helpers({
         return Pitch.find({claimed_by: Meteor.user()._id});
     },
     pitches: function() {
-        return Pitch.find({pitched_by: Meteor.userId()});
+        return Pitch.find({pitched_by: Meteor.user()});
     }
 });
