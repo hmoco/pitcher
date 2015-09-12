@@ -1,0 +1,35 @@
+<head>
+  <title>Pitches</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+    <h1>New Pitch!</h1>
+ 
+      <form class="new-pitch">
+        <input type="text" name="title" placeholder="Name your Pitch!" />
+        <input type="text" name="description" placeholder="Describe your Pitch" />
+
+  		<input type="submit" value="Submit">
+      </form>
+      <br>
+      <br>
+      <h1>Pitches</h1>
+    </header>
+ 
+    <ul>
+      {{#each pitch}}
+        {{> pitch_item}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+ 
+<template name="pitch_item">
+  <li>
+  	<input type="button" class="claim" value="Claim" />
+  <h3>{{title}}:</h3>{{description}}
+  </li>
+</template>
+
