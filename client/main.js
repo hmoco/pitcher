@@ -3,6 +3,3 @@ Template.body.helpers({
     return Pitch.find({claimed_by: ''});
   }
 });
-
-Template.body.events({
-});

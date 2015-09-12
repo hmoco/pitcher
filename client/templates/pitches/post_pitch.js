@@ -1,4 +1,4 @@
-Template.helpers.body({
+Template.body.events({
   "submit .new-pitch": function (event) {
     event.preventDefault();
 

@@ -3,24 +3,26 @@
 </head>
 
 
-<body>  
-<div class="container">
-  <div class="posts page col-xs-9">
-  <h1>Pitches</h1>
-    <ul>
-      {{#each pitch}}
-        {{> pitch_item}}
-      {{/each}}
-    </ul>
+<body>
+  <div class="container">
+    <div class="posts page col-xs-9">
+      <h1>Pitches</h1>
+      <ul>
+        {{#each pitch}}
+          {{> pitch_item}}
+        {{/each}}
+      </ul>
     </div>
     <div class="col-xs-3">
-    <nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-    {{> header}}
-    {{> post_pitch}}
-      <br>
-      </div>
-    </nav>
-  </div>
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          {{> header}}
+          {{#if currentUser}}
+            {{> post_pitch}}
+          {{/if}}
+          <br>
+        </div>
+      </nav>
+    </div>
   </div>
 </body>

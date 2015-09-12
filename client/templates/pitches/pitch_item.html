@@ -1,10 +1,12 @@
 <template name="pitch_item">
   <div class="post">
-    <a href="#" class="upvote btn btn-default claim">Claim</a> 
+    {{#if currentUser}}
+      <a href="#" class="upvote btn btn-primary claim">Claim</a>
+    {{else}}
+      <div class="upvote btn btn-primary claim disabled">Claim</div>
+    {{/if}}
     <div class="post-content">
       <h3>{{title}}:</h3>{{description}}
-      <p>
-      </p>
     </div>
   </div>
 </template>
