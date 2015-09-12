@@ -3,30 +3,15 @@
 </head>
 
 <body>
-<div class="container">
-  <div class="col-sm-9">
-  <header>
-    {{> header}}
-    </header>
-    </div>
+  <div class="container">
     <div class="col-sm-3">
-
-    <h1>New Pitch!</h1>
- 
-      <form class="new-pitch">
-        <input type="text" name="title" placeholder="Name your Pitch!" />
-        <input type="text" name="description" placeholder="Describe your Pitch" />
-
-      <input type="submit" value="Submit">
-      </form>
-  </div>
+      {{> header}}
+      {{> post_pitch}}
+    </div>
+    <div class="posts page col-sm-9">
+      {{#each pitch}}
+        {{> pitch_item}}
+      {{/each}}
+    </div>
   </div>
 </body>
- 
-<template name="pitches">
-  <li>
-    <input type="button" class="claim" value="Claim" />
-  <h3>{{title}}:</h3>{{description}}
-  </li>
-</template>
-
