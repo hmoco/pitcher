@@ -1,5 +1,5 @@
-Template.body.events({
-  "submit .new-pitch": function (event) {
+Template.pitch_submit.events({
+  "submit form": function (event) {
     event.preventDefault();
 
     var title = event.target.title.value;
@@ -7,12 +7,11 @@ Template.body.events({
 
     Pitch.insert({
       claimed_by: '',
-      pitched_by: Meteor.user(),
+      pitched_by: Meteor.userId(),
       title: title,
-      description: description,
+      description: description
     });
     if (Meteor.user().shitcoins){
-      debugger;
       Meteor.users.update(Meteor.userId(), {$set: {shitcoins: Meteor.user().shitcoins + 10}})
     } else {
       Meteor.users.update(Meteor.userId(), {$set: {shitcoins: 10}})

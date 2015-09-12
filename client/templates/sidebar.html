@@ -12,8 +12,8 @@
     <br>
     {{#if currentUser}}
       <a href="{{pathFor 'pitches_page'}}" class="btn btn-block btn-lemon">Pitcher</a>
-      <div class="btn btn-block btn-lemon open-modal-pitch">Pitch!</div>
-      <div class="btn btn-block btn-lemon open-modal-settings">My Stuff!</div>
+      <a href="{{pathFor 'dashboard'}}" class="btn btn-block btn-lemon">My Stuff</a>
+      <a href="{{pathFor 'pitch_submit'}}" class="btn btn-block btn-lemon">Pitch!</a>
     {{/if}}
     <br>
   </div>
