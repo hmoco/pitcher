@@ -1,4 +1,4 @@
-Template.body.events({
+Template.pitch_item.events({
   "click .claim": function(event) {
     event.preventDefault();
     id = this._id;

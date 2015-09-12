@@ -1,4 +1,4 @@
-Template.body.events({
+Template.pitch_submit_button.events({
   "click .open-modal": function(event) {
     event.preventDefault();
     id = this._id;
