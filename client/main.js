@@ -16,7 +16,6 @@ Template.body.events({
       pitched_by: 'current_user',
       title: title,
       description: description,
-
     });
 
     event.target.title.value = "";
