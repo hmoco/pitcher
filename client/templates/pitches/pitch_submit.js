@@ -11,13 +11,13 @@ Template.pitch_submit.events({
       title: title,
       description: description
     });
+
     if (Meteor.user().shitcoins){
       Meteor.users.update(Meteor.userId(), {$set: {shitcoins: Meteor.user().shitcoins + 10}})
     } else {
       Meteor.users.update(Meteor.userId(), {$set: {shitcoins: 10}})
     }
-    event.target.title.value = "";
-    event.target.description.value = "";
+    Router.go('pitches_page');
   }
 });
 
