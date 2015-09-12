@@ -1,5 +1,5 @@
-Template.helpers.body({
-  "submit .new-pitch": function (event) {
+Template.pitch_submit_modal.events({
+  "submit form": function (event) {
     event.preventDefault();
 
     var title = event.target.title.value;
@@ -7,13 +7,12 @@ Template.helpers.body({
 
     Pitch.insert({
       claimed_by: '',
-      pitched_by: 'current_user',
+      pitched_by: Meteor.user(),
       title: title,
       description: description,
     });
 
-    event.target.title.value = "";
-    event.target.description.value = "";
+    Modal.hide();
   }
 });
 
