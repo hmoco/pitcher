@@ -1,23 +1,10 @@
 <template name="pitches_page">
-  <div class="posts page col-xs-9">
-    <ul>
-      {{#each pitch}}
-        {{> pitch_item}}
-      {{/each}}
-      {{#if no_pitches}}
+  <ul>
+    {{#each pitch}}
+      {{> pitch_item}}
+    {{/each}}
+    {{#if no_pitches}}
       <h3> No pitches found, help by pitching an idea!</h3>
-      {{/if}}
-    </ul>
-  </div>
-  <div class="col-xs-3">
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="container-fluid">
-        {{> header}}
-        {{#if currentUser}}
-          {{> pitch_submit_button}}
-        {{/if}}
-        <br>
-      </div>
-    </nav>
-  </div>
+    {{/if}}
+  </ul>
 </template>

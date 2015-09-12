@@ -1,0 +1,35 @@
+<template name="dashboard">
+  <div class="post">
+  <h4>Pitches claimed by you</h4>
+  <ul>
+  {{#each claims}}
+    {{> pitched_item_claimed}}
+  {{/each}}
+  </ul>
+  <br>
+  </div>
+  <div class="post">
+  <h4> Pitched by you</h4>
+  <ul>
+  {{#each pitches}}
+    {{> pitched_item_by_you}}
+  {{/each}}
+  </ul>
+  <br>
+  </div>
+</template>
+
+<template name="pitched_item_claimed">
+  <div class="post">
+    <a href="#" class="upvote btn btn-lemon done">Done!</a>
+    <div class="post-content">
+      <h3>{{title}}:</h3>{{description}}
+    </div>
+  </div>
+</template>
+
+<template name="pitched_item_by_you">
+    <li>
+      <h3>{{title}}:</h3>{{description}}
+    </li>
+</template>

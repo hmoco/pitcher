@@ -1149,18 +1149,24 @@ fieldset[disabled] .btn-info.active {
 }
 .btn-lemon {
   font-style: oblique;
+  font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
+  font-size: larger;
   color: #aa0003;
   background-color: #FFFF66;
   border-color: #FFF44F;
 }
 .btn-lemon:focus {
   font-style: oblique;
+  font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
+  font-size: larger;
   color: #AA0003;
   background-color: #FDFF00;
   border-color:  #eea236;
 }
 .btn-lemon:hover {
   font-style: oblique;
+  font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
+  font-size: larger;
   color: #AA0003;
   background-color: #FDFF00;
   border-color:  #eea236;
