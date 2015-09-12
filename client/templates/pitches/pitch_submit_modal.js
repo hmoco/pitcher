@@ -1,5 +1,5 @@
-Template.body.events({
-  "submit .new-pitch": function (event) {
+Template.pitch_submit_modal.events({
+  "submit form": function (event) {
     event.preventDefault();
 
     var title = event.target.title.value;
@@ -12,8 +12,7 @@ Template.body.events({
       description: description,
     });
 
-    event.target.title.value = "";
-    event.target.description.value = "";
+    Modal.hide();
   }
 });
 
