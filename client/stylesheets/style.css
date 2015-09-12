@@ -1147,6 +1147,24 @@ fieldset[disabled] .btn-info.active {
   color: #5bc0de;
   background-color: #fff;
 }
+.btn-lemon {
+  font-style: oblique;
+  color: #aa0003;
+  background-color: #FFFF66;
+  border-color: #FFF44F;
+}
+.btn-lemon:focus {
+  font-style: oblique;
+  color: #AA0003;
+  background-color: #FDFF00;
+  border-color:  #eea236;
+}
+.btn-lemon:hover {
+  font-style: oblique;
+  color: #AA0003;
+  background-color: #FDFF00;
+  border-color:  #eea236;
+}
 .btn-warning {
   color: #fff;
   background-color: #f0ad4e;
