@@ -11,3 +11,4 @@ twbs:bootstrap
 accounts-password
 ian:accounts-ui-bootstrap-3
 standard-app-packages
+peppelg:bootstrap-3-modal

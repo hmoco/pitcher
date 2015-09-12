@@ -1,12 +1,11 @@
 <head>
-  <title>Pitches</title>
+  <title>Pitcher</title>
 </head>
 
 
 <body>
   <div class="container">
     <div class="posts page col-xs-9">
-      <h1>Pitches</h1>
       <ul>
         {{#each pitch}}
           {{> pitch_item}}
@@ -18,7 +17,7 @@
         <div class="container-fluid">
           {{> header}}
           {{#if currentUser}}
-            {{> post_pitch}}
+            {{> pitch_submit_button}}
           {{/if}}
           <br>
         </div>
