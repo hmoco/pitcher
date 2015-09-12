@@ -27,8 +27,8 @@ if (Meteor.isClient) {
       event.target.description.value = "";
     },
     "click .claim": function(event) {
-      event.preventDefault();
-      id = this.claimed_by;
+      event.preventDefault(); 
+      id = this._id;
       Pitch.update(id, {$set: {claimed_by: 'current_user'}});
       console.log(this.claimed_by)
     }
